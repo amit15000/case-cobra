@@ -1,10 +1,11 @@
+import { Icons } from "@/components/Icon";
 import { MaxWidthWrapper } from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
   return (
-    <div className="bg-slate-50">
+    <div className="bg-slate-50 ">
       <section>
         <MaxWidthWrapper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52 ">
           <div className="col-span-2 px-6 lg:pt-4">
@@ -19,9 +20,11 @@ export default function Home() {
                   className="w-full"
                 />
               </div>
-              <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-relaxed text-gray-900 text-5xl md:text-6xl lg:text-7xl">
                 Your Image on a{" "}
-                <span className="bg-green-600 px-2 text-white">Custom</span>{" "}
+                <span className="bg-green-600 rounded-xl px-2 text-white">
+                  Custom
+                </span>{" "}
                 Phone Case
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
@@ -119,6 +122,29 @@ export default function Home() {
               />
               <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
             </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+      {/* why customers should buy */}
+
+      <section className="bg-slate-100 py-24 ">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+            <h2 className="text-5xl md:text-6xl mt-2 order-1 tracking-tight text-balance !leading-tight  text-center font-bold text-gray-900">
+              What our{" "}
+              <span className="relative px-2">
+                customers
+                <Icons.underline className="hidden sm:block pointer-events-none absolute top-10 inset-0   text-green-500 " />
+              </span>{" "}
+              say
+            </h2>
+            <Image
+              className="order-1 sm:order-2 md:order-3"
+              src="/snake-2.png"
+              alt="Snake"
+              width={100}
+              height={100}
+            />
           </div>
         </MaxWidthWrapper>
       </section>
